@@ -1,0 +1,19 @@
+.rounded:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.price{
+    border: none;
+    background-color: rgb(158, 33, 33);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 70%;
+    
+}
+.price:hover{
+    background-color: rgb(117, 42, 42);
+    transition: all 0.5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
