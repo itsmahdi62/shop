@@ -7,7 +7,11 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./Header.css"
-const Header = () =>{
+const Header = ({setToken}) =>{
+  const logoutHandler= () =>{
+    setToken("");
+    localStorage.clear();
+  }
     return <header className="bg-nav">
         <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -24,7 +28,7 @@ const Header = () =>{
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" className='log-out' onClick={logoutHandler}>Logout</Button>
         </Toolbar>
       </AppBar>
     </Box>

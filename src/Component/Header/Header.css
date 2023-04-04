@@ -2,3 +2,10 @@
     background-color: antiquewhite;
     width: 100%;
 }
+.log-out{
+    padding: 10px;
+    width: 100px;
+    margin-left: 50px;
+    background-color: transparent;
+    color: wheat; 
+}
