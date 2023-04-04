@@ -1,29 +1,33 @@
-import { Container , Nav , Navbar } from "react-bootstrap"
-import { LinkContainer } from "react-router-bootstrap"
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import "./Header.css"
 const Header = () =>{
     return <header className="bg-nav">
-        <Navbar >
-            <Container>
-                <LinkContainer to='/'>
-                    <Navbar.Brand >FC MARKET</Navbar.Brand>
-                </LinkContainer>
-                <Nav>
-                   <LinkContainer to='/cart'>
-                    <Nav.Link className="mx-2 p-1">
-                        <i className="fa fa-shopping-cart me-2"></i>
-                        سبد خرید
-                    </Nav.Link>
-                   </LinkContainer>
-                   <LinkContainer to='/account'>
-                    <Nav.Link className="mx-2 p-1">
-                        <i className="fa fa-user me-2"></i>
-                        حساب کاربری
-                    </Nav.Link>
-                   </LinkContainer>
-                </Nav>
-            </Container>
-        </Navbar>
+        <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
     </header>
 }
 export default Header
